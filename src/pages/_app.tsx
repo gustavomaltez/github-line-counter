@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 
-const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => (
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => (
   <Component {...pageProps} />
 );
 
