@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { FormEvent, useCallback, useState } from 'react';
 import { Container } from '../styles/Home';
-import Repo from './components/Repo';
+import Repo from '../components/Repo';
 
 interface Owner {
   login: string;
