@@ -10,6 +10,7 @@ export default createGlobalStyle`
 
   #__next{
     max-width: 960px;
+    min-width: 270px;
     margin: 0 auto;
     padding: 40px 20px;
   }

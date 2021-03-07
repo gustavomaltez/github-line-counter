@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.a`
+export const Container = styled.div`
   padding: 0.5rem;
   color: #ececec;
   background: #555555;
@@ -9,12 +9,4 @@ export const Container = styled.a`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  min-width: 20rem;
-
-  img {
-    margin-top: 0.4rem;
-    border-style: inherit;
-    background: #007ec6;
-    border: 1px solid #007ec6;
-  }
 `;

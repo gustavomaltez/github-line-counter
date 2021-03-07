@@ -5,7 +5,6 @@ const Container = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background: blue; */
 
   h1 {
     font-size: 2rem;
@@ -20,10 +19,10 @@ const Container = styled.main`
 
     input {
       flex: 1;
-      height: 70px;
-      padding: 0 24px;
+      height: 4rem;
+      padding: 0 1rem;
       border: 0;
-      border-radius: 5px 0 0 5px;
+      border-radius: 0.3rem 0 0 0.3rem;
       color: #3a3a3a;
       border-right: 0;
 
@@ -33,9 +32,10 @@ const Container = styled.main`
     }
 
     button {
-      width: 210px;
+      width: 12rem;
+      min-width: 8rem;
       background: #007ec6;
-      border-radius: 0px 5px 5px 0px;
+      border-radius: 0px 0.3rem 0.3rem 0px;
       border: 0;
       color: #fff;
       font-weight: bold;
@@ -48,6 +48,14 @@ const Container = styled.main`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
+
+    @media (max-width: 940px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 500px) {
+      grid-template-columns: 1fr;
+    }
   }
 `;
 
