@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FiXOctagon } from 'react-icons/fi';
 import Loader from './Loader';
 import { Container } from './styles';
 
@@ -11,9 +12,7 @@ interface Props {
 
 const Repo: React.FC<Props> = ({ data: { full_name, name } }) => {
   const [isLoading, setIsloading] = useState(true);
-  const [imageSRC, setImageSRC] = useState(
-    `https://img.shields.io/tokei/lines/github/${full_name}?style=for-the-badge`,
-  );
+  const imageSRC = `https://img.shields.io/tokei/lines/github/${full_name}?style=for-the-badge`;
 
   const img = new Image();
   img.src = imageSRC;
@@ -26,12 +25,17 @@ const Repo: React.FC<Props> = ({ data: { full_name, name } }) => {
     setIsloading(true);
   };
 
-  return isLoading ? (
-    <Loader />
-  ) : (
-    <Container href={`https://github.com/${full_name}`}>
-      <p> {name.length > 25 ? `${name.substr(0, 25)}...` : name}</p>
-      <img alt={`${name} - Total Lines`} src={imageSRC} />
+  return (
+    <Container>
+      <FiXOctagon />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <a href={`https://github.com/${full_name}`}>
+          <p> {name.length > 25 ? `${name.substr(0, 25)}...` : name}</p>
+          <img alt={`${name} - Total Lines`} src={imageSRC} />
+        </a>
+      )}
     </Container>
   );
 };
