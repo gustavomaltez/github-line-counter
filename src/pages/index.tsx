@@ -58,6 +58,7 @@ const Home: React.FC = () => {
         <title>Line Counter - Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <Container>
         <h1>LineCounter</h1>
         <form onSubmit={handleGetUserRepositories}>
@@ -76,6 +77,7 @@ const Home: React.FC = () => {
             available
           </h2>
         )}
+
         <section>
           {repositories.length > 0 &&
             repositories.map(repo => (

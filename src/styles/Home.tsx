@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.main`
+export const Container = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,6 +51,10 @@ const Container = styled.main`
       color: #fff;
       font-weight: bold;
       transition: background-color 200ms;
+
+      &:hover {
+        background: #0167a1;
+      }
     }
   }
 
@@ -69,5 +73,3 @@ const Container = styled.main`
     }
   }
 `;
-
-export { Container };
