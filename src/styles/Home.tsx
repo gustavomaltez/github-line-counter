@@ -11,6 +11,17 @@ const Container = styled.main`
     font-weight: 400;
   }
 
+  h2 {
+    margin: 2rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    @media (max-width: 650px) {
+      font-size: 1rem;
+    }
+  }
+
   form {
     margin-top: 40px;
     max-width: 700px;
@@ -44,16 +55,16 @@ const Container = styled.main`
   }
 
   section {
-    margin: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
+    width: 100%;
 
     @media (max-width: 940px) {
       grid-template-columns: 1fr 1fr;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
       grid-template-columns: 1fr;
     }
   }

@@ -1,16 +1,21 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { FiXOctagon } from 'react-icons/fi';
 import Loader from './Loader';
 import { Container } from './styles';
 
 interface Props {
   data: {
+    id: number;
     name: string;
     full_name: string;
   };
+  removeRepo: (id: number) => void;
 }
 
-const Repo: React.FC<Props> = ({ data: { full_name, name } }) => {
+const Repo: React.FC<Props> = ({
+  data: { id, name, full_name },
+  removeRepo,
+}) => {
   const [isLoading, setIsloading] = useState(true);
   const imageSRC = `https://img.shields.io/tokei/lines/github/${full_name}?style=for-the-badge`;
 
@@ -25,14 +30,18 @@ const Repo: React.FC<Props> = ({ data: { full_name, name } }) => {
     setIsloading(true);
   };
 
+  const handleRemoveRepo = useCallback(() => {
+    removeRepo(id);
+  }, [removeRepo, id]);
+
   return (
     <Container>
-      <FiXOctagon />
+      <FiXOctagon onClick={handleRemoveRepo} />
       {isLoading ? (
         <Loader />
       ) : (
         <a href={`https://github.com/${full_name}`}>
-          <p> {name.length > 25 ? `${name.substr(0, 25)}...` : name}</p>
+          <p> {name.length > 22 ? `${name.substr(0, 22)}...` : name}</p>
           <img alt={`${name} - Total Lines`} src={imageSRC} />
         </a>
       )}

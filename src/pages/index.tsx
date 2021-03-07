@@ -20,14 +20,12 @@ const Home: React.FC = () => {
   const [ownerData, setOwnerData] = useState<Owner>();
   const [repositories, setRepositories] = useState<Repository[]>([]);
 
-  const [inputError, setInputError] = useState('');
-
   const handleGetUserRepositories = useCallback(
     async (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
 
-      if (!setUser) {
-        setInputError('Insert an user name');
+      if (!user) {
+        alert('Please type a GitHub user!');
         return;
       }
 
@@ -43,13 +41,17 @@ const Home: React.FC = () => {
         }
 
         setRepositories(repositoriesData);
-        setInputError('');
       } catch (error) {
-        setInputError('Erro na busca por esse repositório.');
+        alert("Error! This user doesn't exists");
       }
     },
     [user],
   );
+
+  function handleRemoveRepo(id: number) {
+    setRepositories(oldState => oldState.filter(repo => repo.id !== id));
+  }
+
   return (
     <>
       <Head>
@@ -67,9 +69,22 @@ const Home: React.FC = () => {
           <button type="submit">SEARCH</button>
         </form>
 
+        {ownerData && (
+          <h2>
+            {ownerData.login} - {repositories.length}
+            {repositories.length === 1 ? ' repository ' : ' repositories '}
+            available
+          </h2>
+        )}
         <section>
           {repositories.length > 0 &&
-            repositories.map(repo => <Repo data={repo} />)}
+            repositories.map(repo => (
+              <Repo
+                data={repo}
+                key={String(repo.id)}
+                removeRepo={handleRemoveRepo}
+              />
+            ))}
         </section>
       </Container>
     </>
