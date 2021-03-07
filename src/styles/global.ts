@@ -10,13 +10,13 @@ export default createGlobalStyle`
 
   #__next{
     max-width: 960px;
-    min-width: 270px;
+    min-width: 310px;
     margin: 0 auto;
     padding: 40px 20px;
   }
 
   body{
-    background: #191C20;
+    background: #121214;
     color: #EFEFEF;
     font-family: 'Fira Code', monospace;
     --webkit-font-smoothing: antialiased;

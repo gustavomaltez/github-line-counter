@@ -36,7 +36,7 @@ const Repo: React.FC<Props> = ({
 
   return (
     <Container>
-      <FiXOctagon onClick={handleRemoveRepo} />
+      <FiXOctagon onClick={handleRemoveRepo} className="close-btn" />
       {isLoading ? (
         <Loader />
       ) : (

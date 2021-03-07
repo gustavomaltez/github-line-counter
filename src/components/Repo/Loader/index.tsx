@@ -7,8 +7,8 @@ const Loader: React.FC = () => {
       width={200}
       height={60}
       viewBox="0 0 200 60"
-      backgroundColor="#ffffff"
-      foregroundColor="#d1cfcf"
+      backgroundColor="#2E2E32"
+      foregroundColor="#333335"
       style={{ width: '100%' }}
     >
       <rect x="0" y="0" rx="0" ry="0" width="200" height="25" />
