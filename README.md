@@ -48,7 +48,7 @@ LineCounter is an awesome NextApp that provide you stats about lines of code of 
 ## 🌐 Try it now
 The current build of this project is available [here](https://linecounter.vercel.app/).
 
-## Contributing
+## 🏗 Contributing
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. Do you have any idea or feature to implement in this app? Make a contribution, we will be very happy to see this project grow  :)
 
 1. Fork the Project
