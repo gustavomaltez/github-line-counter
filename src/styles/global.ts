@@ -8,9 +8,15 @@ export default createGlobalStyle`
     outline: 0;
   }
 
+  #__next{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
   body{
-    background: #FFFFFF;
-    color: #212121;
+    background: #191C20;
+    color: #EFEFEF;
     font-family: 'Fira Code', monospace;
     --webkit-font-smoothing: antialiased;
   }
@@ -59,17 +65,16 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(33,33,33,0.95);
+    background: rgba(0, 126, 198, 90);
     border-radius: 0;
   }
 
   ::-webkit-scrollbar-thumb:hover{
-    background: rgba(33,33,33,1);
+    background: rgba(0, 126, 198, 1)
   }
 
   ::-webkit-scrollbar-track{
-    background: #ffffff;
+    background: rgba(85, 85, 85, 0.2);
     border-radius: 0;
-    box-shadow: inset 7px 10px 12px #f0f0f0;
   }
 `;
