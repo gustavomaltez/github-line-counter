@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { FormEvent, useCallback, useState } from 'react';
 import { Container } from '../styles/Home';
+import Repo from './components/Repo';
 
 interface Owner {
   login: string;
@@ -68,15 +69,7 @@ const Home: React.FC = () => {
 
         <section>
           {repositories.length > 0 &&
-            repositories.map(repo => (
-              <div key={String(repo.id)}>
-                <p>{repo.name}</p>
-                <img
-                  alt="Total Lines"
-                  src={`https://img.shields.io/tokei/lines/github/${repo.full_name}?style=for-the-badge`}
-                />
-              </div>
-            ))}
+            repositories.map(repo => <Repo data={repo} />)}
         </section>
       </Container>
     </>

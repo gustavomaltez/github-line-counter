@@ -48,23 +48,6 @@ const Container = styled.main`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
-
-    div {
-      padding: 0.5rem;
-      background: #555555;
-      min-width: 15vw;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      img {
-        margin-top: 0.4rem;
-        border-style: inherit;
-        background: #007ec6;
-        border: 1px solid #007ec6;
-      }
-    }
   }
 `;
 
