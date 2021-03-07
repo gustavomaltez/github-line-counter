@@ -11,6 +11,7 @@ export default createGlobalStyle`
   body{
     background: #FFFFFF;
     color: #212121;
+    font-family: 'Fira Code', monospace;
     --webkit-font-smoothing: antialiased;
   }
 
