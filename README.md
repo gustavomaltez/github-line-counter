@@ -26,13 +26,14 @@
     <li><a href="#-features">Features</a></li>
     <li><a href="#-preview">Preview</a></li>
     <li><a href="#-try-it-now">Try it now</a></li>
+    <li><a href="#-run-project">Run project</a></li>
     <li><a href="#-contributing">Contributing</a></li>
     <li><a href="#-license">License</a></li>
   </ol>
 </details>
 
 ## 🧷 About the project
-LineCounter is an awesome NextApp that provide you stats about lines of code of all github user repositories. This project uses [Shields.io](https://shields.io/) shields to provide data about the code lines of each repository. [Shields.io](https://shields.io/) uses [tokei](https://github.com/XAMPPRocky/tokei) to make the line counting, in the future we will implement an api to get data direcly using tokei.
+LineCounter is an awesome NextApp that provide you stats about lines of code of all github user repositories. This project uses [Shields.io](https://shields.io/) shields to provide data about the code lines of each repository. [shields.io](https://shields.io/) uses [tokei](https://github.com/XAMPPRocky/tokei) to make the line counting, in the future we will implement an api to get data direcly using tokei.
 
 ## 💡 Features
 - [x] Search all repositories of a GitHub user.
@@ -48,6 +49,24 @@ LineCounter is an awesome NextApp that provide you stats about lines of code of 
 ## 🌐 Try it now
 The current build of this project is available [here](https://linecounter.vercel.app/).
 
+## 🛠 Run project
+1. Clone this repository
+   ```sh
+   git clone https://github.com/gustavomaltez/github-line-counter/
+   ```
+2. Install all dependencies
+   ```sh
+   npm install or yarn install
+   ```
+3. Start the application
+   ```sh
+   npm start or yarn start
+   ```
+4. Open the application on localhost 3000
+   ```sh
+   http://localhost:3000
+   ```
+   
 ## 🏗 Contributing
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. Do you have any idea or feature to implement in this app? Make a contribution, we will be very happy to see this project grow  :)
 
