@@ -60,7 +60,7 @@ The current build of this project is available [here](https://linecounter.vercel
    ```
 3. Start the application
    ```sh
-   npm start or yarn start
+   npm dev or yarn dev
    ```
 4. Open the application on localhost 3000
    ```sh
