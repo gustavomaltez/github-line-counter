@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   position: relative;
-  min-height: 4.7rem;
+  min-height: 75px;
 
   background: #555555;
   display: flex;
