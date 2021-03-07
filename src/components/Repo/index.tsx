@@ -23,7 +23,7 @@ const Repo: React.FC<Props> = ({
   img.src = imageSRC;
 
   img.onload = () => {
-    // setIsloading(false);
+    setIsloading(false);
   };
 
   img.onerror = () => {
