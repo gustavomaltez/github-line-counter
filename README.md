@@ -39,6 +39,8 @@ LineCounter is an awesome NextApp that provide you stats about lines of code of 
 - [x] Search all repositories of a GitHub user.
 - [x] Show line count data of all repositories.
 - [x] Remove repository from listing.
+- [ ] Pagination
+- [ ] Search by repository
 
 ## 📺 Preview
 <div align="center">
